@@ -1,0 +1,33 @@
+form {
+    width: 40vh;
+    height: 4vh;
+    display: flex;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    align-items: center;
+    border: 1px solid rgba(140, 140, 140, 0.55);
+    background-color: #f7f6f6;
+}
+
+input {
+    height: 90%;
+    font-size: 16px;
+    flex: 1;
+    border-radius: 7px;
+    border: none;
+    background-color: #f7f6f6;
+}
+
+button {
+    padding: 0 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #f7f6f6;
+}
+
+.MagnifyingGlass {
+    width: 2.5vh;
+    color: #8c8c8c;
+    border: none;
+}
