@@ -2,7 +2,6 @@ form {
     width: 40vh;
     height: 4vh;
     display: flex;
-    margin-bottom: 20px;
     border-radius: 5px;
     align-items: center;
     border: 1px solid rgba(140, 140, 140, 0.55);

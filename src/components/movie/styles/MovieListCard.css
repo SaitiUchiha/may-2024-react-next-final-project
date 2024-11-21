@@ -1,0 +1,9 @@
+.movieListCard{
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.moviesListCardRating{
+    width: 100%;
+}

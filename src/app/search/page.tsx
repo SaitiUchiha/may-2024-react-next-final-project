@@ -24,7 +24,7 @@ const SearchResultPage = async (props: {
             <ul className="space-y-8">
                 {results.map((movie: ISearchResult) => (
                     <div key={movie.id}>
-                        <li className="font-bold" >{movie.name}</li>
+                        <h3 className="font-bold" >{movie.name}</h3><br/>
                     </div>
 
                 ))}

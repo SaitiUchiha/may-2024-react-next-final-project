@@ -1,3 +1,5 @@
+import {IGenreFetch, IMovieFetch} from "@/models/type";
+
 export const options = {
     method: 'GET',
     headers: {
@@ -7,10 +9,11 @@ export const options = {
     next: {revalidate: 60}
 };
 
+export const fetchGenres: IGenreFetch = await fetch('https://api.themoviedb.org/3/genre/movie/list?language=en', options)
+    .then(res => res.json())
 
-export const allGenres = await fetch('https://api.themoviedb.org/3/genre/movie/list?language=en', options)
-    .then(res => res.json());
-
+export const fetchMovies: IMovieFetch = await fetch(`https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc`, options)
+    .then(res => res.json())
 
 export async function fetchSearchMovies({name}: { name: string | string[] | undefined }) {
     const response = await fetch(

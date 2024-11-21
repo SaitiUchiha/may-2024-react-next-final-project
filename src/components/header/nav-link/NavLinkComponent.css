@@ -7,4 +7,6 @@
 .nav-link:visited{
     color: #363636;
 }
-
+.navLinkDiv{
+    width: 30%;
+}
