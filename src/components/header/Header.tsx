@@ -22,8 +22,10 @@ const Header = () => {
                 <li>
                     <NavLinkComponent path={'/genres'}>Genres</NavLinkComponent>
                 </li>
+                <li>
+                    <NavLinkComponent path={'/search'}>Search</NavLinkComponent>
+                </li>
             </ul>
-            <SearchBar/>
             <UserInfo/>
         </header>
     );

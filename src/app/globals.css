@@ -1,0 +1,9 @@
+.searchFailed{
+    font-size: 20px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+.searchDiv{
+    margin: auto 5%;
+    padding: 2% 3%;
+}

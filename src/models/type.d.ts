@@ -15,17 +15,10 @@ export interface IMovies {
     vote_count: number;
 }
 
-export type moviesWithGenres = { genres?: number[], movies?: IMovies[]| IMovies| undefined };
 
 export interface IGenre {
     id: number;
     name: string;
-}
-
-export interface ISearchResult {
-    id: number;
-    name: string;
-    movie: IMovie;
 }
 
 export interface IMovieFetch {
@@ -96,4 +89,14 @@ export interface IMovieSpoken_languages {
     english_name?: string;
     iso_639_1?: string;
     name?: string;
+}
+
+export interface ISearch{
+    id: number;
+    name: string;
+}
+
+export interface ISearchResult {
+    query?: ISearch;
+    movie?: IMovie;
 }

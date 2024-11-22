@@ -17,7 +17,7 @@ export const fetchMovies: IMovieFetch = await fetch(`https://api.themoviedb.org/
 
 export async function fetchSearchMovies({name}: { name: string | string[] | undefined }) {
     const response = await fetch(
-        `https://api.themoviedb.org/3/search/keyword?query=${name}`, options
+        `https://api.themoviedb.org/3/search/movie?query=${name}`, options
     );
     const searchMovie = await response.json();
     return searchMovie;

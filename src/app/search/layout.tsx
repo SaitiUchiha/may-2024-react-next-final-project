@@ -1,5 +1,6 @@
 import {Metadata} from "next";
 import {ReactNode} from "react";
+import SearchBar from "@/components/header/SearchBar";
 
 export const metadata:Metadata = {
     title: "UsersLayout metadata",
@@ -11,7 +12,8 @@ type Props = {
 
 const  SearchResultLayout= ({children}:Props) => {
     return (
-        <div>
+        <div className="searchDiv">
+            <SearchBar/>
             {children}
         </div>
     )

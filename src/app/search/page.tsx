@@ -1,5 +1,6 @@
 import {fetchSearchMovies} from "@/services/api.services";
-import {ISearchResult} from "@/models/type";
+import '@/app/globals.css'
+import Link from "next/link";
 
 
 type SearchParams = Promise<{ [key: string]: string | string[] | undefined }>
@@ -13,18 +14,19 @@ const SearchResultPage = async (props: {
     const movieQuery = searchParams.query;
 //
     if (!movieQuery) {
-        return <div>No search query provided</div>;
+        return <p className="searchFailed">No "Search" provided</p>;
     }
     const {results} = await fetchSearchMovies({ name: movieQuery });
     console.log('movie', results);
 
     return (
         <div>
+
             <h1 className="font-extrabold text-2xl my-10">Search results for "{movieQuery}"</h1>
             <ul className="space-y-8">
-                {results.map((movie: ISearchResult) => (
+                {results.map((movie: IMovies) => (
                     <div key={movie.id}>
-                        <h3 className="font-bold" >{movie.name}</h3><br/>
+                        <Link href={String(movie.id)} className="searchSucsess" >{movie.title}</Link><br/>
                     </div>
 
                 ))}

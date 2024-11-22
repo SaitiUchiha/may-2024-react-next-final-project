@@ -1,11 +1,12 @@
 form {
-    width: 40vh;
-    height: 4vh;
+    width: 65%;
+    height: 5vh;
     display: flex;
-    border-radius: 5px;
+    border-radius: 15px;
     align-items: center;
     border: 1px solid rgba(140, 140, 140, 0.55);
     background-color: #f7f6f6;
+    margin: 10px auto;
 }
 
 input {
@@ -15,6 +16,9 @@ input {
     border-radius: 7px;
     border: none;
     background-color: #f7f6f6;
+}
+input:focus {
+    outline: none;
 }
 
 button {
