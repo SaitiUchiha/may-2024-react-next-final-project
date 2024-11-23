@@ -2,11 +2,10 @@ import React from "react";
 import {fetchMovies} from "@/services/api.services";
 import {IMovies} from "@/models/type";
 import MoviesListCard from "@/components/movie/MoviesListCard";
-import './styles/MoviesList.css'
+import '@/app/globals.css'
 
 
 const MoviesList = async () => {
-
 
 
     return (

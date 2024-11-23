@@ -1,8 +1,6 @@
-
-import './Header.css'
-import SearchBar from "@/components/header/SearchBar";
-import UserInfo from "@/components/header/user/UserInfo";
-import NavLinkComponent from "@/components/header/nav-link/NavLinkComponent";
+import '@/app/globals.css'
+import NavLinkComponent from "@/components/header/NavLinkComponent";
+import UserInfo from "@/components/header/UserInfo";
 
 
 const Header = () => {

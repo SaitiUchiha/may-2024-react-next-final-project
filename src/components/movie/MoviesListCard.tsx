@@ -3,7 +3,8 @@ import PosterPreview from "@/components/movie/PosterPreview";
 import {IMovies} from "@/models/type";
 import StarsRating from "@/components/movie/StarsRating";
 import MovieInfo from "@/components/movie/MovieInfo";
-import './styles/MovieListCard.css'
+import '@/app/globals.css'
+import Link from "next/link";
 
 export interface IProps {
     movie?: IMovies;
@@ -11,13 +12,13 @@ export interface IProps {
 
 const MovieListCard: FC<IProps> = ({movie}) => {
     return (
-        <div className="movieListCard">
-            <PosterPreview movie={movie}/>
-            <MovieInfo movie={movie}/>
-            <div key={movie.id} className="moviesListCardRating">
-                <StarsRating/>
-            </div>
-        </div>
+            <Link className="movieListCard" href={`/movies/${movie.id}`}>
+                <PosterPreview movie={movie}/>
+                <MovieInfo movie={movie}/>
+                <div key={movie.id} className="moviesListCardRating">
+                    <StarsRating/>
+                </div>
+            </Link>
 
     )
 }

@@ -1,6 +1,7 @@
 import {Metadata} from "next";
 import {ReactNode} from "react";
-import SearchBar from "@/components/header/SearchBar";
+import SearchBar from "@/components/SearchBar";
+
 
 export const metadata:Metadata = {
     title: "UsersLayout metadata",

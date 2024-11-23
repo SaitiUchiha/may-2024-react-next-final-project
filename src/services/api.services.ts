@@ -1,4 +1,4 @@
-import {IGenreFetch, IMovieFetch} from "@/models/type";
+import {IGenreFetch, IMovie, IMovieFetch} from "@/models/type";
 
 export const options = {
     method: 'GET',
@@ -12,8 +12,7 @@ export const options = {
 export const fetchGenres: IGenreFetch = await fetch('https://api.themoviedb.org/3/genre/movie/list?language=en', options)
     .then(res => res.json())
 
-export const fetchMovies: IMovieFetch = await fetch(`https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc`, options)
-    .then(res => res.json())
+
 
 export async function fetchSearchMovies({name}: { name: string | string[] | undefined }) {
     const response = await fetch(
@@ -21,4 +20,16 @@ export async function fetchSearchMovies({name}: { name: string | string[] | unde
     );
     const searchMovie = await response.json();
     return searchMovie;
+}
+
+
+export const fetchMovies: IMovieFetch = await fetch(`https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc`, options)
+    .then(res => res.json())
+
+
+export const getMovieById = async (id: string | number): Promise<IMovie> => {
+    const movie: IMovie = await fetch(`https://api.themoviedb.org/3/movie/${id}`, options)
+        .then(value => value.json())
+    console.log(movie)
+    return movie;
 }

@@ -1,9 +1,0 @@
-.genre-list{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 3%;
-    margin: auto 5%;
-    padding: 2% 3%;
-    font-size: 25px;
-}

@@ -1,6 +1,6 @@
 import React, {FC} from "react";
 import {IProps} from "@/components/movie/MoviesListCard";
-import "./styles/PosterPreview.css";
+import "@/app/globals.css";
 
 
 const  PosterPreview:FC<IProps> = async ({movie}) => {

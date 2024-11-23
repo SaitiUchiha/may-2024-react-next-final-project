@@ -1,7 +1,7 @@
 "use client"
 import React, {FC} from "react";
 import {fetchGenres} from "@/services/api.services";
-import './styles/GenreBadge.css'
+import '@/app/globals.css'
 
 interface Props {
    id:number[]

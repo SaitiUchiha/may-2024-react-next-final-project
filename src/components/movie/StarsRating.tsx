@@ -1,6 +1,6 @@
 'use client'
 import React from "react";
-import './styles/StarRating.css'
+import '@/app/globals.css'
 
 
 const StarsRating = () => {

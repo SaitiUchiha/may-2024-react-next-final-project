@@ -2,7 +2,7 @@
 import React, {FC} from "react";
 import Link from "next/link";
 import {usePathname} from "next/navigation";
-import './NavLinkComponent.css'
+import '@/app/globals.css'
 
 type NavLinkProps = {
     path: string;

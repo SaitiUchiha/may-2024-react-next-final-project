@@ -1,8 +1,7 @@
 import React from "react";
 import {fetchGenres} from "@/services/api.services";
 import {IGenre} from "@/models/type";
-import "@/components/movie/styles/GenreBadge.css";
-import './GenresPage.css'
+import "@/app/globals.css"
 
 
 const GenresPage = async () => {

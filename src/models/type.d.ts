@@ -44,7 +44,7 @@ export interface IMovie {
     origin_country?: string[];
     original_language?: string;
     original_title?: string;
-    overview?: string;
+    overview?: string|string[];
     popularity?: number;
     poster_path?: string;
     production_companies?: IMovieProduction_companies[];

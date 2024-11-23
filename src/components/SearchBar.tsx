@@ -1,5 +1,5 @@
 'use client'
-import "./SearchBar.css"
+import "@/app/globals.css"
 import React from 'react';
 import Form from "next/form";
 import {MagnifyingGlassIcon} from "@heroicons/react/24/outline";
