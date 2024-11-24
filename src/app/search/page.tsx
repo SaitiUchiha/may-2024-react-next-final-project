@@ -3,6 +3,8 @@ import '@/app/globals.css'
 import Link from "next/link";
 import {IMovies} from "@/models/type";
 import PosterPreview from "@/components/movie/PosterPreview";
+import {PaginationComponent} from "@/components/movie/MovieListPagination";
+import React from "react";
 
 
 type SearchParams = Promise<{ [key: string]: string | string[] | undefined }>
@@ -18,17 +20,18 @@ const SearchResultPage = async (props: {
     if (!movieQuery) {
         return <p className="searchFailed"></p>;
     }
-    const {results} = await fetchSearchMovies({name: movieQuery});
+    const searchResult = await fetchSearchMovies({name: movieQuery});
 
     return (
         <div className='searchResultDiv'>
-            {results.map((movie: IMovies) => (
+            {searchResult.results.map((movie: IMovies) => (
                 <div key={movie.id} className='searchResultCard'>
                     <Link href={`/movies/${movie.id}`}><p className="searchSucsess">{movie.title}</p></Link>
                     <Link href={`/movies/${movie.id}`}> <PosterPreview movie={movie}/></Link>
                 </div>
 
             ))}
+            <PaginationComponent pageCount={searchResult.total_pages}/>
         </div>
     )
 };

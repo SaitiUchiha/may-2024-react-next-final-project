@@ -7,13 +7,17 @@ import "@/app/globals.css"
 const GenresPage = async () => {
 
     return (
-        <div className='genre-list'>
-            {fetchGenres.genres.map((genre: IGenre) =>
-                <h2 key={genre.id} className={'genreBadge'}>
-                    {genre.name}
-                </h2>)
-            }
+        <div className='genresContainer'>
+            <h1>Genres</h1>
+            <div className='genre-list'>
+                {fetchGenres.genres.map((genre: IGenre) =>
+                    <h2 key={genre.id} className={'genreBadge'}>
+                        {genre.name}
+                    </h2>)
+                }
+            </div>
         </div>
+
 
     )
 }

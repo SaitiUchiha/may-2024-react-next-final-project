@@ -20,13 +20,13 @@ const MovieDetailPage = async ({params}: Params) => {
     const movie: IMovie = await getMovieById(params.id);
     return (
         <div className="movieDetailPage">
-            <StarsRating/>
             <h1>{movie.title}</h1>
             <div className="movie-detail-div-flex">
                 <div>
                     <img src={`https://image.tmdb.org/t/p/w500/${movie?.poster_path}`} alt=""/>
                     <div className='genreBadgeList'>{movie.genres.map((e: IMovieGenres) =>
                         <span key={e.id} className='genreBadge'>{e?.name}</span>)}</div>
+                    <StarsRating/>
                     <span><b>Tagline:</b><br/>{movie.tagline}</span>
                 </div>
 
@@ -45,6 +45,7 @@ const MovieDetailPage = async ({params}: Params) => {
                         <b>Vote Coun t:</b>{movie.vote_count}<br/>
                         <b>Revenue:</b> {movie.revenue}
                     </p>
+                    <hr/>
                     <div className='movie-detail-list-flex'>
                         <div>
                             <h3>Production Companies:</h3>
@@ -82,6 +83,7 @@ const MovieDetailPage = async ({params}: Params) => {
             <p className='movieDetailsGalleryTitle'>{movie.belongs_to_collection?.name}</p>
             <Link href={movie.homepage} className='movie-detail-Homepage-link'><span>Homepage</span></Link>
             <div className='movieDetailsGallery'>
+
                 <img src={`https://image.tmdb.org/t/p/w500${movie.belongs_to_collection?.poster_path}`}
                      alt={movie.belongs_to_collection?.name}/>
                 <img src={`https://image.tmdb.org/t/p/w500${movie.belongs_to_collection?.backdrop_path}`}

@@ -6,3 +6,5 @@ installed npm
 ### Search Bar is finally working + added posters and other things
 
 #### Finished with styling, added Movie by Id page. Somewhat optimized code
+
+#### Added pagination corrected code&ui again.

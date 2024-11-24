@@ -14,7 +14,7 @@ export const fetchGenres: IGenreFetch = await fetch('https://api.themoviedb.org/
 
 
 
-export async function fetchSearchMovies({name}: { name: string | string[] | undefined }) {
+export async function fetchSearchMovies({name}: { name: string | string[] | undefined }): Promise<IMovieFetch> {
     const response = await fetch(
         `https://api.themoviedb.org/3/search/movie?query=${name}`, options
     );
@@ -23,8 +23,15 @@ export async function fetchSearchMovies({name}: { name: string | string[] | unde
 }
 
 
-export const fetchMovies: IMovieFetch = await fetch(`https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc`, options)
+export const fetchPopularMovies: IMovieFetch = await fetch(`https://api.themoviedb.org/3/movie/popular?language=en-US&page=7`, options)
     .then(res => res.json())
+
+export const fetchMovies = async (currentPage: number): Promise<IMovieFetch> => {
+    const movie: IMovieFetch = await fetch(`https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=${currentPage}&sort_by=popularity.desc`, options)
+        .then(value => value.json())
+    console.log(movie)
+    return movie;
+}
 
 
 export const getMovieById = async (id: string | number): Promise<IMovie> => {
