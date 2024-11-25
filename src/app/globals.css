@@ -306,6 +306,12 @@ input[type="radio"] {
 .genre-list h2 {
     font-size: 22px;
 }
+.movie-list-by-genre{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 .genreBadgeList {
     display: flex;

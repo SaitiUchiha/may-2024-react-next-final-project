@@ -30,7 +30,14 @@ export const fetchMovies = async (currentPage: number): Promise<IMovieFetch> => 
     const movie: IMovieFetch = await fetch(`https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=${currentPage}&sort_by=popularity.desc`, options)
         .then(value => value.json())
     console.log(movie)
+
     return movie;
+}
+
+export const fetchMoviesByGenre = async (currentPage: number, currentGenre:string): Promise<IMovieFetch> => {
+    const genre: IMovieFetch = await fetch(`https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=${currentPage}&sort_by=popularity.desc&with_genres=${currentGenre}`, options)
+        .then(value => value.json())
+    return genre;
 }
 
 

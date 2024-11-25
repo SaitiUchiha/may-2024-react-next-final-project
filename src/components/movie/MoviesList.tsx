@@ -1,9 +1,7 @@
 import React from "react";
-import {fetchMovies} from "@/services/api.services";
 import {IMovies} from "@/models/type";
 import MoviesListCard from "@/components/movie/MoviesListCard";
 import '@/app/globals.css'
-import {PaginationComponent} from "@/components/movie/MovieListPagination";
 
 interface MoviesProps{
     movies: IMovies[]

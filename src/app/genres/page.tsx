@@ -1,19 +1,21 @@
 import React from "react";
+import "@/app/globals.css"
 import {fetchGenres} from "@/services/api.services";
 import {IGenre} from "@/models/type";
-import "@/app/globals.css"
+import Link from "next/link";
 
 
 const GenresPage = async () => {
+
 
     return (
         <div className='genresContainer'>
             <h1>Genres</h1>
             <div className='genre-list'>
                 {fetchGenres.genres.map((genre: IGenre) =>
-                    <h2 key={genre.id} className={'genreBadge'}>
+                    <Link href={`/genres/${genre.id}?genre=${genre.name}`} key={genre.id}><h2 className={'genreBadge'}>
                         {genre.name}
-                    </h2>)
+                    </h2></Link>)
                 }
             </div>
         </div>
