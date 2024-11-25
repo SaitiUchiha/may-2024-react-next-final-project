@@ -14,10 +14,6 @@ const Header = () => {
             <ul className={`links`}>
 
                 <li>
-                    <NavLinkComponent path={'/movies'}>Movies</NavLinkComponent>
-
-                </li>
-                <li>
                     <NavLinkComponent path={'/genres'}>Genres</NavLinkComponent>
                 </li>
                 <li>

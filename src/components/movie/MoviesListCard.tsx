@@ -12,7 +12,7 @@ export interface IProps {
 
 const MovieListCard: FC<IProps> = ({movie}) => {
     return (
-            <Link className="movieListCard" href={`/movies/${movie.id}`}>
+            <Link className="movieListCard" href={`/${movie.id}`}>
                 <PosterPreview movie={movie}/>
                 <MovieInfo movie={movie}/>
                 <div key={movie.id} className="moviesListCardRating">

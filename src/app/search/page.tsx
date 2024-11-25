@@ -26,8 +26,8 @@ const SearchResultPage = async (props: {
         <div className='searchResultDiv'>
             {searchResult.results.map((movie: IMovies) => (
                 <div key={movie.id} className='searchResultCard'>
-                    <Link href={`/movies/${movie.id}`}><p className="searchSucsess">{movie.title}</p></Link>
-                    <Link href={`/movies/${movie.id}`}> <PosterPreview movie={movie}/></Link>
+                    <Link href={`/${movie.id}`}><p className="searchSucsess">{movie.title}</p></Link>
+                    <Link href={`/${movie.id}`}> <PosterPreview movie={movie}/></Link>
                 </div>
 
             ))}
