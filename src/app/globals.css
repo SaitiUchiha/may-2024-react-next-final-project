@@ -6,7 +6,7 @@
     align-items: center;
     margin: auto 5%;
     gap: 30px;
-    font-size: 20px;
+    font-size: 22px;
 }
 
 .logoDiv {
@@ -303,9 +303,20 @@ input[type="radio"] {
     padding: 2% 16%;
 }
 
-.genre-list h2 {
+.genre-list a h2 {
     font-size: 22px;
+    color: #363636;
 }
+
+.genre-list a:link{
+    text-decoration: none;
+}
+
+.genre-list a:visited h2 {
+    color: #363636;
+}
+
+
 .movie-list-by-genre{
     display: flex;
     flex-direction: column;
